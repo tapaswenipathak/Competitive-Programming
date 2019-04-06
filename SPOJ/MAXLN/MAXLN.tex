@@ -1,0 +1,62 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amssymb,amsmath}
+
+%opening
+\title{Explanation of SPOJ Problem MAXLN}
+\author{Tapasweni Pathak}
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{Explanation of SPOJ Problem MAXLN}\\
+\end{center}
+
+\raggedright
+
+First of all the triangle CAB shown in the figure is right angled triangle.So, now we have :
+
+\begin{eqnarray}
+AB^2 + AC^2 = BC^2 \\
+AB^2 + AC^2 = (2r)^2 \\
+AB^2 = 4r^2 - AC^2 
+\end{eqnarray}
+
+As given in the question :
+
+\begin{eqnarray}
+s = AB^2 + AC\\
+s = 4r^2 - AC^2 +AC\\
+s = -AC^2 + AC + 4r^2
+\end{eqnarray}
+
+Now we have a quadratic equation, and we have to find its maximum. Maximum value occurs when
+
+\begin{flalign}
+AC = \frac{-b}{2a}
+\end{flalign}
+
+So now using values of a and b from equation 6 we get :
+
+\begin{flalign}
+AC &= \frac{-b}{2a} \\
+\nonumber &= \frac{-1}{-2}\\
+\nonumber &= \frac{1}{2}
+\end{flalign}
+
+Putting the value of AC from 8 in 6 we get :
+
+\begin{flalign}
+s &= -\frac{1}{2}^2 + \frac{1}{2} + 4r^2\\
+\nonumber &= \frac{-1}{4} + \frac{1}{2} + 4r^2\\
+\nonumber &= \frac{1}{4} + 4r^2\\
+\nonumber &= 0.25 + 4r^2\\
+\end{flalign}
+
+Hence the equation we are going to use is :
+
+\begin{equation}
+s = 0.25 + 4r^2
+\end{equation}
+
+\end{document}
